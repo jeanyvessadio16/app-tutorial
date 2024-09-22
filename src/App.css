@@ -1,3 +1,5 @@
+/* Sidebar style */
+
 .sidebar{
     background-color: white;
     display: flex;
@@ -24,3 +26,56 @@
 .activeLink{
     background-color: #0364aec7;
 }
+
+/* Sidebar style */
+
+
+/* login style */
+
+.login{
+    height: 100vh;
+    background-image: url(../src/assets/images/cas-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login .text-color{
+    color: #0364AE;
+}
+
+.login .loginCard{
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 10px;
+}
+
+.login .loginCard .btnLogin{
+    background-color: #0364AE;
+}
+
+
+/* login style */
+
+/* forgotPass style */
+
+.forgotPassword {
+    height: 100vh;
+    background-image: url(../src/assets/images/cas-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.forgotPassword .text-color {
+    color: #0364AE;
+}
+
+.forgotPassword .forgotCard {
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 10px;
+}
+
+.forgotPassword .forgotCard .btnLogin {
+    background-color: #0364AE;
+}
+
+
+/* forgotPass style */

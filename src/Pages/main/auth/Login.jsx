@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 // import { Link } from "lucide-react";
 
 const Login = () => {
@@ -46,74 +47,76 @@ const Login = () => {
   };
 
   return (
-    <div className="login flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          className="mx-auto h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt="Your Company"
-        />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in to your account
-        </h2>
-      </div>
+    <div className="login flex min-h-full flex-col justify-center">
+      <div className="loginCard shadow border w-1/3 mx-auto py-10 px-8">
+        <div className="">
+          <h2 className="text-center mb-5 text-2xl font-bold leading-9 tracking-tight text-color">
+            Connectez-vous
+          </h2>
+        </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form
-          className="space-y-6"
-          action="#"
-          method="POST"
-          onSubmit={handleLogin}
-        >
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Email address
-            </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+        <div className="">
+          <form
+            className="space-y-6"
+            action="#"
+            method="POST"
+            onSubmit={handleLogin}
+          >
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium leading-6 text-color"
+              >
+                Votre adresse email
+              </label>
+              <div className="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  placeholder="monnom@gmail.com"
+                  className="block px-3 w-full text-color rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-          </div>
 
-          <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Password
-            </label>
-            <div className="mt-2">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium leading-6 text-color"
+              >
+                Votre mot de passe
+              </label>
+              <div className="mt-2 mb-3">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  placeholder="mot de passe"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
+                />
+
+                <span className="mt-2">
+                  <Link to="/forgotPassword">Mot de passe oublié ?</Link>
+                </span>
+              </div>
             </div>
-          </div>
-          <span><a href="/forgotPassword">Mot de passe oublié</a></span>
-          <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 py-2 px-4 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
-            >
-              Sign in
-            </button>
-          </div>
-        </form>
+            <div>
+              <button
+                type="submit"
+                className="flex w-full justify-center rounded-md btnLogin py-2 px-4 text-sm font-semibold text-white shadow-sm focus:ring-2 focus:ring-inset "
+              >
+                Se connecter
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
