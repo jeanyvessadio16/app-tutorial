@@ -1,0 +1,26 @@
+.sidebar{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav{
+    /* border: 1px solid red; */
+    flex-grow: 1;
+}
+
+.sidebar nav li {
+    border-radius: 25px;
+}
+
+.sidebar nav li a{
+    font-weight: 600;
+}
+
+.sidebar nav li a i{
+    margin-right: 10px;
+}
+
+.activeLink{
+    background-color: #0364aec7;
+}
